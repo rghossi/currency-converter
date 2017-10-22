@@ -2892,7 +2892,7 @@ hoek@4.x.x:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.0.tgz#72d9d0754f7fe25ca2d01ad8f8f9a9449a89526d"
 
-hoist-non-react-statics@2.3.0, hoist-non-react-statics@^2.2.1:
+hoist-non-react-statics@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.3.0.tgz#ede16318c2ff1f9fe3a025396ba06fd4c44608bb"
 
@@ -5144,7 +5144,7 @@ react-proxy@^1.1.7:
     lodash "^4.6.1"
     react-deep-force-update "^1.0.0"
 
-react-redux@5.0.4:
+react-redux@5.0.4, react-redux@^5.0.2:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.4.tgz#1563babadcfb2672f57f9ceaa439fb16bf85d55b"
   dependencies:
@@ -5155,17 +5155,6 @@ react-redux@5.0.4:
     lodash-es "^4.2.0"
     loose-envify "^1.1.0"
     prop-types "^15.0.0"
-
-react-redux@^5.0.2:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
-  dependencies:
-    hoist-non-react-statics "^2.2.1"
-    invariant "^2.0.0"
-    lodash "^4.2.0"
-    lodash-es "^4.2.0"
-    loose-envify "^1.1.0"
-    prop-types "^15.5.10"
 
 react-test-renderer@16.0.0-alpha.12:
   version "16.0.0-alpha.12"
@@ -5268,6 +5257,10 @@ redux-logger@^2.7.4:
   resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-2.10.2.tgz#3c5a5f0a6f32577c1deadf6655f257f82c6c3937"
   dependencies:
     deep-diff "0.3.4"
+
+redux-saga@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/redux-saga/-/redux-saga-0.15.3.tgz#be2b86b4ad46bf0d84fcfcb0ca96cfc33db91acb"
 
 redux@3.7.2, redux@^3.6.0:
   version "3.7.2"
