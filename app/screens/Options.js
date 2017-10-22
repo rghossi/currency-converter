@@ -11,6 +11,7 @@ class Options extends Component {
   handleThemePress = () => {};
 
   handleSitePress = () => {};
+
   render() {
     return (
       <ScrollView>
