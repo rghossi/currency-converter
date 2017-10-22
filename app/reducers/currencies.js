@@ -34,6 +34,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         baseCurrency: state.quoteCurrency,
         quoteCurrency: state.baseCurrency,
+        conversions: setConversions(state, { currency: state.quoteCurrency }),
       };
     case c.CHANGE_BASE_CURRENCY:
       return {
