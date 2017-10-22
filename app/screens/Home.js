@@ -27,12 +27,14 @@ class Home extends Component {
   handlePressBaseCurrency = () => {
     this.props.navigation.navigate('CurrencyList', {
       title: 'Base Currency',
+      type: 'base',
     });
   };
 
   handlePressQuoteCurrency = () => {
     this.props.navigation.navigate('CurrencyList', {
       title: 'Quote Currency',
+      type: 'quote',
     });
   };
 
@@ -58,10 +60,10 @@ class Home extends Component {
       LastConvertedDate,
     } = this.props;
 
-    let quotePrice = (amount * conversionRate).toFixed(2);
+    let quotePrice = '...';
 
-    if (isFetching) {
-      quotePrice = '...';
+    if (!isFetching) {
+      quotePrice = (amount * conversionRate).toFixed(2);
     }
     return (
       <Container>
@@ -97,7 +99,7 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   const {
-    baseCurrency, quoteCurrency, conversions, amount, isFetching,
+    baseCurrency, quoteCurrency, conversions, amount,
   } = state.currencies;
 
   const conversionSelector = conversions[baseCurrency] || {};
@@ -108,7 +110,7 @@ const mapStateToProps = (state) => {
     quoteCurrency,
     amount,
     conversionRate: rates[quoteCurrency] || 0,
-    isFetching,
+    isFetching: conversionSelector.isFetching,
     LastConvertedDate: conversionSelector.date ? new Date(conversionSelector.date) : new Date(),
   };
 };
